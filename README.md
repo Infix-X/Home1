@@ -1,3 +1,6 @@
-# Home1
-#chatbot
-WELCOME TO MY FIRST PROJECT
+# Arrays:
+All array problem Here:
+WELCOME TO MY Programming World
+A warm Gesture to u'll....
+Hope you like these series..
+Dont forgot to give me star...
