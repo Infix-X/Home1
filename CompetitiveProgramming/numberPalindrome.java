@@ -30,3 +30,32 @@ public class PalinInte {
         System.out.println( isPalindrome(num));
     }
 } 
+
+
+ALL TEST CASES PASS by bellow onr----|||>
+    class Solution {
+    public boolean isPalindrome(int x) {
+        // int sum=0;
+        int rever=0;
+        int temp=x;
+        if(x<0){return false;}
+        while(x>0 ){
+            int digit =x%10;
+            rever=(rever*10)+digit;
+            x=x/10;
+
+        }
+        //sum+=x;
+
+        if(rever==temp){
+            return true;
+        }
+        return false;
+    }
+}
+
+
+
+
+
+
