@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GATE Examination Registration</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+	<header>
+		<h1>GATE Examination Registration Form</h1>
+	</header>
+	<main>
+		<form action="#" method="post" onsubmit="return validateForm()">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name"><br>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email"><br>
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password"><br>
+
+			<label for="gender">Gender:</label>
+			<input type="radio" id="male" name="gender" value="male">
+			<label for="male">Male</label>
+			<input type="radio" id="female" name="gender" value="female">
+			<label for="female">Female</label><br>
+
+			<label for="subjects">Subjects:</label>
+			<input type="checkbox" id="cs" name="cs" value="cs">
+			<label for="cs">Computer Science</label>
+			<input type="checkbox" id="me" name="me" value="me">
+			<label for="me">Mechanical Engineering</label>
+			<input type="checkbox" id="ee" name="ee" value="ee">
+			<label for="ee">Electrical Engineering</label><br>
+
+			<input type="submit" value="Submit">
+			<input type="reset" value="Reset">
+		</form>
+	</main>
+	<footer>
+		<p>&copy; 2023 GATE Examination</p>
+	</footer>
+</body>
+</html>
