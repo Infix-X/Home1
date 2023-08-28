@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Regestration</title>
+</head>
+<body>
+    <h1>Job application</h1>
+    <form>
+        <label for="Name" >Name:</label><br/>
+        <input type="text" id="Name" name="Name">
+        <br/>
+        <label for="Email" >email:</label><br/>
+        <input type="text" id="Email" name="Email">
+        <br/>
+        <label for="Phone" >Phone:</label><br/>
+        <input type="tel" id="Phone" name="Phone">
+        <br/>
+        <br/>
+        <label for="file">Resume</label>
+        <input type="file" id="file" name="file">
+        <br/>
+        <br/>
+        <label for="Experiences" >Experiences:</label>
+        <input type="number" id="Experiences" name="Experience" min="0" max="10"><br/><br/>
+
+        <select name="Occupation" id="occuppation" >
+            <option value=""> Occpation</option>
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+            <option value="HOD">HOD</option>
+            <option value="other">other</option>
+        </select>
+        <fieldset>
+            <legend>Topic of Interest</legend>
+            <label for="Html">HTML</label>
+            <input type="checkbox" name="Interest" value="HTML"><br/>
+            <label for="CSS">CSS</label>
+            <input type="checkbox" name="Interest" value="CSS"><br/>
+            <label for="JS">JS</label>
+            <input type="checkbox" name="Interest" value="JS"><br/>
+            </fieldset>
+            <br/><br/>
+            <select name="Education type" id="Education Type" >
+                <option value=""> Education</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+            <br/><br/>
+            <fieldset>
+                <legend>Availability</legend>
+                <label for="Full time">Full time</Table></label>
+                <input type="radio" name="radio" value="radio1"><br/>
+
+                <br/>
+                <label for="part time">Part time</Table></label>
+                <input type="radio" name="radio" value="radio"><br/>
+                </fieldset>
+            
+            <label for="Comment">comment</label><br/>
+            
+        <textarea name="textarea" id="text" cols="30" rows="10"></textarea>
+            <input type="submit" value="Regester">
+        
+    </form>
+    
+</body>
+</html>
