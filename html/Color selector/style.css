@@ -1,0 +1,9 @@
+nav {
+    background-color: palevioletred;
+    text-align: center; /* Center align the contents horizontally */
+}
+
+/* Style your buttons here */
+button {
+    margin: 10px; /* Add margin for spacing between buttons */
+}
