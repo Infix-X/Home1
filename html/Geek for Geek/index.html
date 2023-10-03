@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div id="content">
+            <p id="text">Geek for Geek<br/>
+              A computer science portal for geeks</p>
+            <button onclick="changeFont()">Change Font</button>
+        </div>
+        
+        <script>
+            let currentFont = "Arial, sans-serif";
+        
+            function changeFont() {
+                const textElement = document.getElementById("text");
+                if (currentFont === "Arial, sans-serif") {
+                    textElement.style.fontFamily = "Times New Roman, serif";
+                    currentFont = "Times New Roman, serif";
+                } else {
+                    textElement.style.fontFamily = "Arial, sans-serif";
+                    currentFont = "Arial, sans-serif";
+                }
+            }
+        </script>
+    </div>
+    <div class="login">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <>
+            
+            <b class="password">password:</b><input type="password">
+            <!---to make one checked remaining unchecked we need to make both input belong to same grp by name attributes-->
+            <b>Gender:</b><input type="radio" name="gen">male<input type="radio" name="gen">female<br/>
+            <b>Hobbies</b><input type="checkbox" name="game">Cricket<input type="checkbox" name="game">scrabble</br>
+            <b>Age</b><input type="number" ></br>
+            <b>DOB:</b><input type="date" ></br>
+            <b>country:</b><select>
+                <option value="c">click on downword arrow</option>
+                <option value="c">India</option>
+                <option value="c">NewZealand</option>
+                <option value="c">Austrlia</option>
+                <option value="c">Germany</option>
+            </select>
+            <b>Address</b><textarea></textarea><br/><br/>
+            <b>resume</b><input type="file" >
+        </p>
+    </div>
+   
+</body>
+</html>

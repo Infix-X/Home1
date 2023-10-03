@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(114, 117, 117);
+    color: #21BA45;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set the body's height to the viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+ #text{
+    text-align: center;
+    size:0cqw; 
+ }
+
+ .login{
+    
+ }
