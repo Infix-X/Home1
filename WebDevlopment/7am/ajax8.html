@@ -1,0 +1,39 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<script src="axios.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    // prepare content
+    const App = () => {
+        const fnGetUsers = async() => {
+            //url: https://jsonplaceholder.typicode.com/users
+            //method: get
+           
+            axios.get("https://jsonplaceholder.typicode.com/users")
+            .then((res)=>{
+                console.log(res.data)
+            })
+            .catch((res)=>{
+                console.log(res)
+            })
+
+          
+        }
+        return <div>
+            <button onClick={fnGetUsers}>Get Users</button>
+        </div>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>

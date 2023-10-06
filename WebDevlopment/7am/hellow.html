@@ -1,0 +1,22 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+// prepare content
+ const App=()=>{
+    return <h1>Hellow World</h1> // JSX - HTML + JS + XML
+ }
+ 
+ // container ref
+ const container = document.getElementById("root")
+ const root = ReactDOM.createRoot(container);
+// render content inide the container
+root.render(<App></App>)
+
+</script>

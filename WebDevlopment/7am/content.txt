@@ -1,0 +1,291 @@
+7AM 12-07-2023
+
+SrinivasRao
+
+60 hours (7 AM to 8 AM - MON to SAT)
+
+HTML 
+====
+
+1. Why do we go for HTML?
+
+2. Inline vs Block-level elements
+
+3. Attributes
+
+4. Input controls
+
+5. Table
+
+6. List
+
+CSS
+===
+
+1. Why do we go for CSS
+
+2. How many ways can we apply CSS ?
+
+3. Selectors
+
+4. Media queries
+
+5. Positions
+
+6. Box model
+
+7. Bootstrap
+
+JavaScript:
+=======
+
+1. Introduction
+
+2. Variables
+
+3. Functions
+
+4. Array Methods
+
+5. String Methods
+
+6. JSON Object
+
+7. Get Reference
+
+8. Apply Styles
+
+9. Events
+
+10. Debouncing
+
+11. Throttling
+
+12. Async vs defer
+
+13. OOPS
+
+14. Set Timeout
+
+15. Set Interval
+
+16. Browser Storages
+
+17. BOM
+
+18. Call, apply, bind
+
+19. Closure
+
+20. Event Bubbling
+
+21. Event Capturing
+
+22. Exception Handling
+
+23. Callbacks
+
+24. Promises
+
+25. Async Await
+
+26. AJAX
+
+27. Async functions
+
+28. Arrow functions
+
+29. Spread operator vs Rest Parameter
+
+30. Array and Object destructuring.
+
+31. Event Looping
+
+32. Generators
+
+33. Regular Expressions
+
+34. var, let , const
+
+35. Variable and Method hoisting.
+
+React:
+====
+
+1. Why do we go for React ?
+
+2. How to prepare the templates in react (functional components) and JSX
+
+3. How to handle the events(click, focus, blur ...) ?
+
+4. How to take the data from inputControls(textbox,password,radio,checkbox,textarea,fileupload,dropdown)?
+
+5. State vs Props
+
+6. State value update, prop value update
+
+7. Communication b/w components (parent-child , child-parent)
+
+8. Context API
+
+9. How to handle AJAX(XMLHttpRequest, fetch, Axios)
+
+10. Lifecycle phases
+
+11. Lists and keys
+
+12. Reusable components
+
+13. How to apply styles dynamically (inline, class)
+
+14. Handle Routing in React
+
+15. Conditional Rendering
+
+16. Integrate bootstrap, react-bootstrap, material UI design
+
+17. Module CSS, styled-components, SASS.
+
+18. Default Props , PropTypes
+
+19. Test cases(jest+RTL)
+
+20. Higher Order Components
+
+21. Cypress(JavaScript Automation Testing)
+
+22. Create and publish your own lib in npmjs.
+
+React Hooks:
+=========
+
+1. useState
+
+2. useEffect
+
+3. useRef
+
+4. useContext
+
+5. useReducer
+
+6. useMemo
+
+7. useCallback
+
+8. useTransistion
+
+9. Custom Hook
+
+Build and Deploy:
+============
+
+Godaddy
+
+AWS
+
+Vercel
+
+Version Control:
+==========
+
+GIT
+
+Backend:
+======
+
+1. node js 
+
+DataBase:
+=======
+
+1. MongoDB
+
+Redux(state management at application level):
+=============================
+
+1. How to implement Redux in your React Application ?
+
+2. actions, reducers, store
+
+Data Visualization:
+=============
+
+1. Visualization(Bar, line , Pie charts)
+
+EtoE Application(Online Test) :
+==================
+
+1. client(React +Redux) + Server(node with express ) + MongoDB
+
+GraphQL:
+======
+
+1. client(React with GraphQL) + Server(node with Graphql) + MongoDB
+
+JWT:
+====
+
+1. client(React ) + Server(node with express )
+
+Others:
+=====
+
+1. Next JS --
+
+2. React Native --
+
+3. React With Typescript --
+
+Practice Examples:
+============
+
+HackerRank
+
+LeetCode
+
+Softwares need to install:
+=================
+
+1. Visual Studio Code : https://code.visualstudio.com/
+
+2. git : https://git-scm.com/downloads
+
+3. DesktopGit : https://desktop.github.com/
+
+4. MongoDB : https://www.mongodb.com/try/download/community
+
+5. MongoDB compass : https://www.mongodb.com/products/compass
+
+6. Node s/w  or nvm : https://nodejs.org/en/download or https://github.com/coreybutler/nvm-windows/releases
+
+7. postman : https://www.postman.com/downloads/
+
+Create Accounts:
+===========
+
+1. https://github.com/
+
+2. https://www.vercel.com/
+
+3. https://mongodb.com/
+
+4. https://aws.amazon.com/
+
+5. https://www.npmjs.com/
+
+Learning Websites:
+============
+
+1. www.uijavakit.com
+
+2. www.kalamschools.com
+
+3. www.yourpost.in
+
+4. www.writetest.in 
+
+Email:
+====
+
+chenchala.srinu@gmail.com

@@ -1,0 +1,36 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+    // prepare content
+    const App = () => {
+        const [cnt,setCnt]=React.useState(0);
+        const fnIncrement=()=>{
+           for(let i=0;i<5;i++){
+             // setCnt(cnt+1) 
+            setCnt((val)=>{
+                return val+1
+            })
+            
+           }
+        }
+        return <div>
+              <h1>{cnt}</h1>
+              <button onClick={fnIncrement}>Increment5</button>
+            </div>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>

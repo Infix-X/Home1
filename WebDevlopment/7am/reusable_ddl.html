@@ -1,0 +1,32 @@
+<script src="react.js"></script>
+<script src="babel.js"></script>
+<script src="reactDOM.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel" >
+
+const DropDown=(props)=>{
+    const {lbl,data}=props;
+    return <p>
+      <b>{lbl}:</b><select>
+            {
+                data.map((val,ind)=>{
+                    return <option key={"opt_"+ind}>{val}</option>
+                })
+            }
+        </select>
+    </p>
+}
+
+const App=()=>{
+    const players=["Sachin","Dhoni",'Kohli']
+    const students=['s1','s2','s3','s4','s5']
+    return <div>
+        <DropDown lbl="Players" data={players} />
+        <DropDown lbl="Students" data={students} />
+        </div>
+}
+const root=ReactDOM.createRoot(document.getElementById("root"))
+root.render(<App />)
+</script>

@@ -1,0 +1,38 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+ const A=({myName})=>{
+    //const {myName} =props;
+    return <div>
+          <h1>A(Child):{myName}</h1>
+        </div>
+ }
+ const App=()=>{
+    const [name,setName]=React.useState('')
+    const nameRef=React.useRef()
+    const fnClick=()=>{
+        setName(nameRef.current.value)
+    }
+    return <div>
+           <h1>App(Parent)</h1>
+           <p>Name:<input ref={nameRef} /></p>
+           <button onClick={fnClick}>Send</button>
+           <A myName={name}  />
+        </div>
+ }
+ 
+ // container ref
+ const container = document.getElementById("root")
+ const root = ReactDOM.createRoot(container);
+// render content inide the container
+root.render(<App></App>)
+
+</script>

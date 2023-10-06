@@ -1,0 +1,44 @@
+#header{
+    text-align: center;
+    background: yellow;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.footer{
+    background: yellow;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+body{
+    margin:0px
+}
+.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    background: #b5b5a4;
+    line-height: 40px;
+}
+
+.menu > li{
+    display: inline;
+    font-size: 20px;
+    margin: 15px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+h1{
+    text-align: center;
+    margin: 100px;
+    height: 1000px;
+}
+nav{
+    position: sticky;
+    top:0
+}

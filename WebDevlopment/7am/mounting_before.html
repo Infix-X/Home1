@@ -1,0 +1,23 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    // prepare content
+    const App = () => {
+        console.log('100 lines of code executed  before loading the content')
+        return <h1>Hellow...Sachin</h1>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>

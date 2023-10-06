@@ -1,0 +1,36 @@
+<script src="react.js"></script>
+<script src="babel.js"></script>
+<script src="reactDOM.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    const App=()=>{// uncontrolled components
+         const no1Ref=React.useRef()
+         const no2Ref=React.useRef()
+         // should not go with let, var
+         const [result,setResult]=React.useState(0)
+         const fnSum=()=>{
+           const no1= no1Ref.current.value
+           const no2= no2Ref.current.value
+           const sum=Number(no1)+Number(no2)
+           setResult(sum)
+        }
+        return <div>
+              <p>
+                 <b>No1:</b><input ref={no1Ref} />
+              </p>
+               <p>
+                <b>No2:</b><input ref={no2Ref} />
+               </p>
+              <p>
+                 <button onClick={fnSum}>Sum</button>
+              </p>
+              <h1>{result}</h1>
+            </div>
+    }
+
+    const root=ReactDOM.createRoot(document.getElementById("root"))
+    root.render(<App />)
+    
+</script>

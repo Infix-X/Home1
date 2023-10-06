@@ -1,0 +1,44 @@
+<script src="react.js"></script>
+<script src="babel.js"></script>
+<script src="reactDOM.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel" >
+
+const Table=(props)=>{
+    const {title,data}=props
+    return <div>
+           <h3>{title}</h3>
+           <table border="1px">
+             <thead>
+                <tr>
+                    <th>S.no</th> 
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    data.map((val,ind)=>{
+                        return <tr key={"tr_"+ind}>
+                                <td>{ind+1}</td>
+                                <td>{val}</td>
+                            </tr>
+                    })
+                }
+            </tbody>
+           </table>
+        </div>
+}
+
+const App=()=>{
+    const players=["Sachin","Dhoni",'Kohli']
+    const students=['s1','s2','s3','s4','s5']
+    return <div>
+            <Table title="Players" data={players} />
+            <Table title="Students" data={students} />
+        </div>
+}
+const root=ReactDOM.createRoot(document.getElementById("root"))
+root.render(<App />)
+</script>

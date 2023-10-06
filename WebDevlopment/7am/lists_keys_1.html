@@ -1,0 +1,66 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    // prepare content
+    const App = () => {
+       const players =["Sachin","Kohli","UV","Dhoni","Panth","Lara"]
+       
+        return <div>
+            <h1>Order List</h1>
+           <ol>
+                {
+                    players.map((val,ind,oa)=>{
+                        return <li key={"li_"+ind}>{val}</li>
+                    })
+                }
+            </ol>
+            <h1>Dropdown</h1>
+            <select>
+               {
+                players.map((val,ind,oa)=>{
+                   return <option key={"option_"+ind}>{val}</option>
+                })
+               }
+            </select>
+            <h1>Using Para</h1>
+            {
+                players.map((val,ind,oa)=>{
+                    return <p key={"p_"+ind}>{val}</p>
+                })
+            }
+            <h1>Table</h1>
+            <table border="1px">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        players.map((val,ind,oa)=>{
+                            return <tr key={"tr_"+ind}>
+                                    <td>{ind+1}</td>
+                                    <td>{val}</td>
+                                </tr>
+                        })
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>
