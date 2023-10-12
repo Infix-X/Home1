@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+</head>
+<body>
+    
+
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    // prepare content
+    const App = () => {
+        const player=[
+            {
+                n:"sachin",
+                r:20000,
+                l:"Mumbai"
+            },
+            {
+                n:"dhoni",
+                r:10000,
+                l:"Ranchi"
+            }
+        ]
+    
+    return <table border="1px">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Run</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+    
+    <tbody>
+        {
+            player.map((ele,ind,oa)=>{
+                const{n,r,l}=ele; // Corrected variable name
+                return<tr key={ind}> {/* Added key attribute */}
+                    <td>{n}</td>
+                    <td>{r}</td>
+                    <td>{l}</td>
+                    </tr>
+            })
+        }
+    </tbody>
+</table>
+}
+  
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App/>)
+
+</script>
+</body>
+</html>
