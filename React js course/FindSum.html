@@ -1,0 +1,40 @@
+<script src="react.js"></script>
+<script src="babel.js"></script>
+<script src="ReactDOM.js"></script>
+<div id="root"></div>
+<script type="text/babel">
+    function fn(){
+
+        var n1 = document.querySelector('#root > div > p:nth-child(1) > input').value
+        var n2=document.querySelector('#root > div > p:nth-child(2) > input').value
+        var result=Number(n1)*parseInt(n2)
+        document.querySelector('#root > div > h1').innerText = result
+        var color="red"
+        if(result<100){
+            color="green"
+        }
+        document.querySelector('#root > div > h1').style.color = color
+        
+        
+
+     }
+    function App(){
+
+        return <div>
+            <p>
+                <b>no:1</b><input />
+            </p>
+            <p>
+                <b>no:2</b><input />
+            </p>
+            <button onClick={fn}>result</button>
+            <h1>0</h1>
+
+        </div>
+    
+    
+    }
+    var contRef = document.getElementById("root")
+    var root = ReactDOM.createRoot(contRef)
+    root.render(<App />)
+</script>
