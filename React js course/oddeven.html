@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="react.js"></script>
+    <script src="ReactDOM.js"></script>
+    <script src="babel.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function fn() {
+        var n1 = document.querySelector('#root > div > p:nth-child(1) > input').value;
+        var isEven = n1 % 2 === 0;
+
+        if (isEven) {
+          document.querySelector('#root > div > h1').innerText = `is even`;
+          document.querySelector('#root > div > h1').style.color = 'green';
+        } else {
+          document.querySelector('#root > div > h1').innerText = `${n1} is odd`;
+          document.querySelector('#root > div > h1').style.color = 'red';
+        }
+      }
+
+      function App() {
+        return (
+          <div>
+            <p>
+              <b>Number:</b>
+              <input />
+            </p>
+            <button onClick={fn}>Check Even/Odd</button>
+            <h1></h1>
+          </div>
+        );
+      }
+
+      var contRef = document.getElementById('root');
+      var root = ReactDOM.createRoot(contRef);
+      root.render(<App />);
+    </script>
+  </body>
+</html>
