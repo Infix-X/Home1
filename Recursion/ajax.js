@@ -1,1 +1,0 @@
-console.log("Namastey World these is first ajax")
