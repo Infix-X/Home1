@@ -1,0 +1,39 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    const A=()=>{
+        React.useEffect(()=>{
+            console.log(' A is mounted')
+        },[])
+
+        React.useEffect(()=>{
+            return ()=>{
+                console.log(" A is going to unmounting...")
+            }
+        },[])
+        return <h1>A component</h1>
+    }
+    // prepare content
+    const App = () => {
+        const [isShow,setIsShow]=React.useState(true)
+        return <div>
+            <h1>App Component</h1> 
+            <button onClick={()=>setIsShow(!isShow)}>click</button>
+            {isShow && <A />}
+        </div>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>

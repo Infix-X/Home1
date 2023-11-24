@@ -1,0 +1,26 @@
+<script src="react.js"></script>
+<script src="babel.js"></script>
+<script src="reactDOM.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+    const Student=(props)=>{
+        const {name,rno,children}=props
+        return <h1>Hi Myself {name}, rno is {rno}, marks are {children}.</h1>
+    }
+
+
+    const App=()=>{
+        return <div>
+          <Student name="s1" rno="1"  >500</Student>
+          <Student name="s2" rno="2" >455</Student>
+          <Student name="s3" rno="3" >545</Student>
+        </div>
+    }
+
+   const root= ReactDOM.createRoot(document.getElementById("root"))
+   root.render(<App />)
+
+</script>

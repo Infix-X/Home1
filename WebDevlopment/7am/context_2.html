@@ -1,0 +1,68 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+     const ctx=React.createContext();
+     const {Provider} =ctx;
+     const A = () => {
+            return <div>
+                <h1>A </h1>
+                <B />
+            </div>
+        }
+     const B = () => {
+            const ctxData=React.useContext(ctx)
+            return <div>
+                <h1>B :{ctxData[0]} </h1>
+                <C />
+                <D />
+            </div>
+        }
+     const C = () => {
+            const ctxData=React.useContext(ctx)
+            return <div>
+                <h1>C:{ctxData[1]} </h1>
+                <E />
+            </div>
+        }
+    const D = () => {
+            return <div>
+                <h1>D </h1>
+            </div>
+        }
+    const E = () => {
+        return <div>
+            <h1>E </h1>
+        </div>
+    }
+     const F = () => {
+         const ctxData = React.useContext(ctx)
+            return <div>
+                <h1>F:{ctxData[2]}</h1>
+            </div>
+        }
+    const App = () => {
+        const players=["Sachin", "Dhoni","Kohli"]
+        return <div>
+              <h1>App </h1>
+              <Provider value={players}>
+                <A />
+                <F />
+              </Provider>
+             
+            </div>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>

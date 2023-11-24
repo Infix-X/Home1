@@ -1,0 +1,85 @@
+<script src="react.js"></script>
+<script src="babel.js"></script>
+<script src="reactDOM.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel" >
+
+const Table=(props)=>{
+  const {title,headings,data,keys}=props;
+  return <div>
+        <h3>{title}</h3>
+        <table border="2px">
+            <thead>
+                <tr>
+                   {
+                    headings.map((v,i)=>{
+                        return <th key={"th_"+i}>{v}</th>
+                    })
+                   }
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    data.map((obj,ind)=>{
+                        return <tr key={"tr_"+ind}>
+                                {
+                                    keys.map((k,i)=>{
+                                        return <td key={"td_"+i}>{obj[k]} </td>
+                                    })
+                                }
+                            </tr>
+                    })
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+const App=()=>{
+    const students=[
+       {
+            name:'S1',
+            rno:1
+        },
+         {
+            name: 'S2',
+            rno: 2
+        },
+         {
+            name: 'S3',
+            rno: 3
+        }
+    ]
+    const players=[
+        {
+            n:"Sachin",
+            l:"Mumbai",
+            r:20000
+        },
+         {
+            n: "Dhoni",
+            l: "Ranchi",
+            r: 15000
+        }
+    ]
+
+    return <div>
+             <Table 
+                title="Students"
+                headings={["Name","Rno"]}
+                data={students}
+                keys={["name","rno"]}
+             />
+              <Table
+                 title="Players"
+                 headings={["Name","Location","Runs"]}
+                 data={players}
+                 keys={["n","l","r"]}
+            />
+        </div>
+}
+const root=ReactDOM.createRoot(document.getElementById("root"))
+root.render(<App />)
+</script>

@@ -1,0 +1,48 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    // prepare content
+    const App = () => {
+        const [cnt,setCnt]=React.useState(0)
+        const [name,setName]=React.useState("Sachin")
+        React.useEffect(() => {
+            console.log('no dependencies')
+        }) 
+        React.useEffect(()=>{
+            console.log("Mounting: After mounting...")
+        },[])
+
+        React.useEffect(()=>{
+            if(cnt !=0){
+            console.log("Updating: after count change ...")
+            }
+        },[cnt])
+
+        React.useEffect(()=>{
+            if(name != 'Sachin'){
+            console.log("Updating: after sachin changed to Dhoni")
+            }
+        },[name])
+
+        return <div>
+             <h1>Current count is: {cnt}  </h1>
+             <button onClick={()=>setCnt(cnt+1)}>Increment</button>
+             <h1>{name}</h1> 
+             <button onClick={()=>setName("Dhoni")}>change name</button>
+         </div>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>

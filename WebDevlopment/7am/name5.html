@@ -1,0 +1,20 @@
+<script src="react.js"></script>
+<script src="babel.js"></script>
+<script src="reactDOM.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    
+    const Name=()=>{
+       return <h1>Narent IT, Hyderabad</h1> // JSX (HTML + JS + XML)
+    }
+
+    const App=()=>{
+        return <div><Name /><Name /><Name /><Name /><Name /></div> // JSX (HTML+JS+XML)
+    }
+
+    const container=document.getElementById('root');
+    const root=ReactDOM.createRoot(container);
+    root.render(<App/>)
+</script>

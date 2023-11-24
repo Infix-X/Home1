@@ -1,0 +1,51 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    // prepare content
+    const App = () => {
+        const data=[
+            {
+                "id":1,
+                "que":"How to pass the data from child to Parent ?",
+                "options":["callback","state","props","refs"],
+                "type":"S",
+            },
+            {
+                "id":2,
+                "que": "Below which are inline elements ?",
+                "options":["sapn","p","i","b"],
+                "type": "M",
+            }
+        ]
+          return <div>
+            {
+                data.map((obj, ind, oa) => {
+                    const {que,options,type,id} =obj
+                    return <div key={"div_"+ind}>
+                        <h3>Q. {que}</h3>
+                        {
+                            options.map((opt,index,oa)=>{
+                                return <p key={"p_"+index}><input name={id} type={type=='S' ? 'radio':'checkbox'} />{opt}</p>
+                            })
+                        }
+                    </div>
+                })
+            }
+        </div>
+
+    }
+  
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>

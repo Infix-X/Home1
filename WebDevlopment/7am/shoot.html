@@ -1,0 +1,59 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+.board{
+    width: 400px;
+    height: 300px;
+    border: 1px solid red;
+    display: inline-block;
+    position: relative;
+}
+.wall{
+    border: 1px solid blue;
+    position: absolute;
+    height: 250px;
+    left: 380;
+    top: 20px;
+}
+.arrow{
+        border: 1px solid green;
+    position: absolute;
+    width: 100px;
+    top: 125px;
+}
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    // prepare content
+    const App = () => {
+        const [l,setL]=React.useState(0)
+        const fnShoot=()=>{
+            const intervalId=setInterval(()=>{
+                setL((val)=>{
+                    if(val==280){
+                        clearInterval(intervalId)
+                        return 0
+                    }
+                    return val+1
+                })
+            },20)
+        }
+        return <div>
+              <div className="board">
+                <div className="wall"></div>
+                <div style={{left:l}} className="arrow"></div>
+              </div> 
+              <button onClick={fnShoot}>Shoot</button>
+            </div>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>

@@ -1,0 +1,37 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    // prepare content
+    const App = () => {
+        const fnGetUsers=()=>{
+            //url: https://jsonplaceholder.typicode.com/users
+            //method: get
+            const obj=new XMLHttpRequest();
+            obj.open("get","https://jsonplaceholder.typicode.com/users")
+            obj.send()
+            obj.onload=()=>{
+                alert(obj.responseText)  
+            }
+            obj.onerror=()=>{
+                alert('fail')
+            }
+        }
+        return <div>
+                <button onClick={fnGetUsers}>Get Users</button>
+            </div>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>

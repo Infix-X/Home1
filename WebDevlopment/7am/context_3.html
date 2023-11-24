@@ -1,0 +1,73 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+     const ctx1=React.createContext();
+     const ctx2 = React.createContext();
+     const A = () => {
+        const ctx1Data=React.useContext(ctx1)
+        const ctx2Data = React.useContext(ctx2)
+
+            return <div>
+                <h1>A : {ctx1Data} {ctx2Data.name}</h1>
+                <B />
+            </div>
+        }
+     const B = () => {
+            return <div>
+                <h1>B </h1>
+                <C />
+                <D />
+            </div>
+        }
+     const C = () => {
+            return <div>
+                <h1>C </h1>
+                <E />
+            </div>
+        }
+    const D = () => {
+            return <div>
+                <h1>D </h1>
+            </div>
+        }
+    const E = () => {
+        const ctxData=React.useContext(ctx1)
+        return <div>
+            <h1>E:{ctxData}</h1>
+        </div>
+    }
+     const F = () => {
+        const ctxData = React.useContext(ctx2)
+            return <div>
+                <h1>F:{ctxData.name} </h1>
+            </div>
+        }
+    const App = () => {
+        const name="Sachin";
+        const obj={name:'Dhoni'}
+        return <div>
+              <h1>App </h1>
+               <ctx1.Provider value={name}>
+                <ctx2.Provider value={obj}>
+                    <A />
+                    <F />
+                 </ctx2.Provider>
+               </ctx1.Provider>
+             
+            </div>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>

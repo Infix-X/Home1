@@ -1,0 +1,49 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+    const A = (props) => {
+        const [name, setName] = React.useState()
+        const fnChange = (eve) => {
+            setName(eve.target.value)
+        }
+        const fnClick = () => {
+            props.fn(name)
+        }
+        return <div>
+            <h1>A(Child)</h1>
+            <p>Name:<input onChange={fnChange} /></p>
+            <button onClick={fnClick}>Send</button>
+        </div>
+    }
+    const B=(props)=>{
+        return <div>
+              <h1>B:{props.name}</h1>
+            </div>
+    }
+    const App = () => {
+        const [data, setData] = React.useState('')
+        const f = (name) => {
+            setData(name)
+        }
+        return <div>
+            <h1>App(Parent)</h1>
+            <A fn={f} />
+            <B name={data} />
+        </div>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>

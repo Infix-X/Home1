@@ -1,0 +1,36 @@
+<script src="react.js"></script>
+<script src="reactDOM.js"></script>
+<script src="babel.js"></script>
+
+<style>
+ .cr{
+    color:red
+ }
+ .cb{
+    color: blue;
+ }
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+    // prepare content
+    const App = () => {
+        const [cnt,setCnt]=React.useState(0);
+        const fnIncrement=()=>{
+            setCnt(cnt+1) // one argument may be new value/ callback function
+        }
+        return <div>
+              <h1 className={cnt%2==0 ? 'cr': 'cb'}>{cnt}</h1>
+              <button onClick={fnIncrement}>click</button>
+            </div>
+    }
+
+    // container ref
+    const container = document.getElementById("root")
+    const root = ReactDOM.createRoot(container);
+    // render content inide the container
+    root.render(<App></App>)
+
+</script>
